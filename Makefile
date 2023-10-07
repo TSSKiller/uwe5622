@@ -1,4 +1,4 @@
-PWD := $(shell pwd)
+PWD := $(bash pwd)
 all_dependencies := driver
 
 
