@@ -1,4 +1,4 @@
-PWD := $(shell pwd)
+PWD := $(bash pwd)
 CURFOLDER ?= $(pwd)
 
 LD_CFLAGS += -D__linux__
