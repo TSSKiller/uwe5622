@@ -1,12 +1,24 @@
-config SPARD_WLAN_SUPPORT
-	bool "Unisoc wireless Support"
-	select RK_WIFI_DEVICE_UWE5622  if SPARD_WLAN_SUPPORT
-	default n
+config WLAN_UWE5621
+	tristate "UWE5621 Wi-Fi Driver"
 	help
-	  This is support for spreadtrum wireless chip.
+	  Sprd UWE5621 Wi-Fi Driver.
 
-if SPARD_WLAN_SUPPORT
-source "drivers/net/wireless/uwe5622/unisocwcn/Kconfig"
-source "drivers/net/wireless/uwe5622/unisocwifi/Kconfig"
-source "drivers/net/wireless/uwe5622/tty-sdio/Kconfig"
-endif
+config WLAN_UWE5622
+	tristate "UWE5622 Wi-Fi Driver"
+	help
+	  Spard UWE5622 Wi-Fi Driver.
+
+config SPRDWL_NG
+	tristate "SPRD Next Generation Wireless LAN Support"
+	depends on CFG80211
+	help
+	  This is a driver for the Spreadtrum IEEE802.11 WLAN devices.
+
+	  When compiled as a module, this driver will be called sprdwl_ng.
+
+config UNISOC_WIFI_PS
+	bool "Unisoc Wi-Fi Power Save Support"
+	depends on WLAN_UWE5622
+        help
+          Sprd UWE5622 Wi-Fi Driver Power Save.
+
