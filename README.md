@@ -1,1 +1,1 @@
-This is for usage with JELOS
+This is for use with JELOS
