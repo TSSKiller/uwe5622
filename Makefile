@@ -12,7 +12,7 @@ export CONFIG_AW_BIND_VERIFY=n
 export CONFIG_WLAN_UWE5622=m
 export CONFIG_TTY_OVERY_SDIO=m
 
-export UNISOCWCN_DIR=$(shell pwd)/unisocwcn/
+export UNISOCWCN_DIR=$(bash pwd)/unisocwcn/
 export UNISOC_BSP_INCLUDE=$(UNISOCWCN_DIR)/include
 
 #ccflags-y += -DDEBUG
